@@ -1,6 +1,8 @@
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -22,6 +24,8 @@ public class FirstTest {
 	@Test
 	public void test() throws InterruptedException {
 		driver.get("https://f1news.ru");
+		WebElement element=driver.findElement(By.cssSelector(".navbar_head li:nth-child(2)"));
+		element.click();
 		Thread.sleep(2000);
 	
 	}
